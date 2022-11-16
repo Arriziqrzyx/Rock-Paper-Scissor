@@ -9,9 +9,15 @@ EditorBuildSettings:
     path: Assets/Scenes/Menu.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-    path: Assets/Scenes/Gameplay.unity
-    guid: 4691a84d3716532488d545a0be185512
+    path: Assets/Scenes/GameplayBot.unity
+    guid: ad126b993abc32047924bdd9c49f9366
   - enabled: 1
-    path: Assets/Scenes/Gameplay1.unity
-    guid: 7b1a1871f3824b747b34280f2a1c1077
+    path: Assets/Scenes/GameplayMult.unity
+    guid: d3d88bb41c79f3e42b784d68156636dc
+  - enabled: 1
+    path: Assets/Scenes/Lobby.unity
+    guid: ae58fa8bfadf4ba458516a01c720d36a
+  - enabled: 1
+    path: Assets/Scenes/OnlineGame.unity
+    guid: d02257ce6d8a03d47ada9dedafed49f8
   m_configObjects: {}
