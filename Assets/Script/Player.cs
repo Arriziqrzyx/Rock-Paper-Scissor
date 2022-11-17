@@ -77,7 +77,7 @@ public class Player : MonoBehaviour
     public void AnimateDraw()
     {
         animationTweener = chosenCard.transform
-        .DOMove(chosenCard.originalPosition,0.7f)
+        .DOMove(chosenCard.OriginalPosition,0.7f)
         .SetEase(Ease.InElastic)
         .SetDelay(0.2f);
     }
@@ -92,7 +92,7 @@ public class Player : MonoBehaviour
         Card[] cards = GetComponentsInChildren<Card>();
         foreach (var card in cards)
         {
-            card.setClickable(value);
+            card.SetClickable(value);
         }
     }
 }
