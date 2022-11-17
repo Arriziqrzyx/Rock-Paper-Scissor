@@ -132,11 +132,8 @@ public class LobbyManager : MonoBehaviourPunCallbacks
 
         }
 
-<<<<<<< HEAD
-=======
         // start game hanya bisa diklik ketika jumlah pemain tertentu
         // jadi atur juga disini
->>>>>>> f715c4796f9f1b2d75adc14a1d00faa5f0325ef1
         SetStartGameBUtton();
     }
 

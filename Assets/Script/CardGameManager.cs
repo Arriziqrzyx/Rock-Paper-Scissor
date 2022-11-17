@@ -27,6 +27,7 @@ public class CardGameManager : MonoBehaviour, IOnEventCallback
     public TMP_Text ping;
     public TMP_Text WinnerText;
     public GameObject gameOverPanel;
+    // public List<int> syncReadyPlayers = new List<int>(2);
     HashSet<int> syncReadyPlayers = new HashSet<int>(2);
     public bool Online = true;
     public enum GameState
@@ -158,7 +159,7 @@ public class CardGameManager : MonoBehaviour, IOnEventCallback
                     else
                     {
                         gameOverPanel.SetActive(true);
-                        //replay button harus diatur lagi
+
                         if (PhotonNetwork.IsMasterClient)
                         {
                             ReplayButton.SetActive(true);
@@ -210,7 +211,7 @@ public class CardGameManager : MonoBehaviour, IOnEventCallback
         if (this.NextState == newState)
             return;
 
-
+        // kirim message bahwa kita sudah siap
         var actorNum = PhotonNetwork.LocalPlayer.ActorNumber;
         var raiseEventOptions = new RaiseEventOptions();
         raiseEventOptions.Receivers = ReceiverGroup.All;
@@ -225,7 +226,7 @@ public class CardGameManager : MonoBehaviour, IOnEventCallback
         {
             case playerChangeState:
                 var actorNum = (int)photonEvent.CustomData;
-
+                // if (syncReadyPlayers.Contains(actorNum) == false)
                 syncReadyPlayers.Add(actorNum);
                 break;
             default:
