@@ -18,7 +18,11 @@ public class GamePlayNetworkManager : MonoBehaviourPunCallbacks
         while (PhotonNetwork.IsConnected)
             yield return null;
 
+<<<<<<< HEAD
         SceneManager.LoadScene("Menu");
+=======
+        SceneManager.LoadScene("Main");
+>>>>>>> f715c4796f9f1b2d75adc14a1d00faa5f0325ef1
     }
 
     public void BackToLobby()
@@ -38,6 +42,12 @@ public class GamePlayNetworkManager : MonoBehaviourPunCallbacks
     {
         if (PhotonNetwork.IsMasterClient)
         {
+<<<<<<< HEAD
+=======
+            // var scene = SceneManager.GetActiveScene();
+            // PhotonNetwork.AutomaticallySyncScene = true;
+            // DontDestroyOnLoad(gameObject);
+>>>>>>> f715c4796f9f1b2d75adc14a1d00faa5f0325ef1
             PhotonNetwork.LoadLevel("Lobby");
 
         }
